@@ -1,0 +1,48 @@
+<html>
+<head>
+	<script type="text/javascript" src="cordova.js"></script>
+</head>
+<body>
+
+<script>
+
+var applicationId = "REPLACE_THIS_WITH_YOUR_APPLICATION_ID";
+var clientKey = "REPLACE_THIS_WITH_YOUR_CLIENT_KEY";
+
+/*
+var applicationId;
+var clientKey;
+//android
+if (navigator.userAgent.match(/Android/i)) {
+	applicationId = "REPLACE_THIS_WITH_YOUR_APPLICATION_ID";
+	clientKey = "REPLACE_THIS_WITH_YOUR_CLIENT_KEY";
+}
+//ios
+else if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+	applicationId = "REPLACE_THIS_WITH_YOUR_APPLICATION_ID";
+	clientKey = "REPLACE_THIS_WITH_YOUR_CLIENT_KEY";
+}
+//wp8
+else if( navigator.userAgent.match(/Windows Phone/i) ) {
+	applicationId = "REPLACE_THIS_WITH_YOUR_APPLICATION_ID";
+	clientKey = "REPLACE_THIS_WITH_YOUR_CLIENT_KEY";
+}
+*/
+
+document.addEventListener("deviceready", function(){
+
+	//call registerAsPushNotificationClient internally
+	window.parse.setUp(applicationId, clientKey);
+	
+	//registerAsPushNotificationClient callback
+	window.parse.onRegisterAsPushNotificationClientSucceeded = function() {
+		//alert('onRegisterAsPushNotificationClientSucceeded');
+		window.parse.subscribeToChannel('Game');
+	};
+}, false);
+</script>
+
+Cordova Parse
+
+</body>
+</html>
