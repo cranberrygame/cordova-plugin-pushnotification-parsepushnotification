@@ -41,12 +41,12 @@ Plugin ID: com.cranberrygame.cordova.plugin.pushnotification.parse
 ```c
 ```
 
-<img src="https://github.com/cranberrygame/com.cranberrygame.cordova.plugin.pushnotification.parse/blob/master/doc/1.png"><br>
-<img src="https://github.com/cranberrygame/com.cranberrygame.cordova.plugin.pushnotification.parse/blob/master/doc/2.png"><br>
-<img src="https://github.com/cranberrygame/com.cranberrygame.cordova.plugin.pushnotification.parse/blob/master/doc/3.png"><br>
-<img src="https://github.com/cranberrygame/com.cranberrygame.cordova.plugin.pushnotification.parse/blob/master/doc/4.png"><br>
-<img src="https://github.com/cranberrygame/com.cranberrygame.cordova.plugin.pushnotification.parse/blob/master/doc/5.png"><br>
-<img src="https://github.com/cranberrygame/com.cranberrygame.cordova.plugin.pushnotification.parse/blob/master/doc/6.png">
+<img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/1.png"><br>
+<img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/2.png"><br>
+<img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/3.png"><br>
+<img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/4.png"><br>
+<img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/5.png"><br>
+<img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/6.png">
 
 # API #
 ```javascript
@@ -109,8 +109,8 @@ window.parse.subscribeToChannel('Game');//parameter: channel
 window.parse.unsubscribe('Game');//parameter: channel
 ```
 # Examples #
-<a href="https://github.com/cranberrygame/com.cranberrygame.cordova.plugin.pushnotification.parse/blob/master/example/basic/index.html">example/basic/index.html</a><br>
-<a href="https://github.com/cranberrygame/com.cranberrygame.cordova.plugin.pushnotification.parse/blob/master/example/advanced/index.html">example/advanced/index.html</a><br>
+<a href="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/example/basic/index.html">example/basic/index.html</a><br>
+<a href="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/example/advanced/index.html">example/advanced/index.html</a><br>
 
 # Test #
 
