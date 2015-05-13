@@ -7,9 +7,9 @@ parse push notification
 
 requires parse account http://parse.com
 
-Parse android SDK 1.9.0
-Parse ios SDK
-Parse wp8 SDK
+Parse android SDK (v1.9.2)
+Parse ios SDK (v1.7.2)
+Parse wp8 SDK (v1.4.1)
 
 this is open source cordova plugin.
 
@@ -117,7 +117,7 @@ window.parse.unsubscribe('Game');//parameter: channel
 [![](http://img.youtube.com/vi/xX4znfZx8HE/0.jpg)](https://www.youtube.com/watch?v=xX4znfZx8HE&feature=youtu.be "Youtube")
 
 You can also run following test apk.
-https://dl.dropboxusercontent.com/u/186681453/pluginsforcordova/parse/parsetest.apk
+https://dl.dropboxusercontent.com/u/186681453/pluginsforcordova/parse/CordovaApp-debug.apk
 
 # Useful links #
 
