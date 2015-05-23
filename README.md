@@ -20,22 +20,30 @@ this is open source cordova plugin.
 
 ## Cordova cli ##
 ```c
+https://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface - npm install -g cordova@4.1.2
+
 cordova plugin add com.cranberrygame.cordova.plugin.pushnotification.parse
 ```
 
 ## Xdk ##
 ```c
-XDK PORJECTS - your_xdk_project - CORDOVA 3.X HYBRID MOBILE APP SETTINGS - PLUGINS AND PERMISSIONS - Third Party Plugins - Add a Third Party Plugin - Get Plugin from the Web -
+https://software.intel.com/en-us/intel-xdk - Download XDK - XDK PORJECTS - [specific project] - CORDOVA 3.X HYBRID MOBILE APP SETTINGS - PLUGINS - Third Party Plugins - Add a Third Party Plugin - Get Plugin from the Web -
 
-Name: revmob
+Name: parse
 Plugin ID: com.cranberrygame.cordova.plugin.pushnotification.parse
 [v] Plugin is located in the Apache Cordova Plugins Registry
 ```
 
+## Cocoon ##
+https://cocoon.io - Create project - [specific project] - Setting - Plugins - Search - cranberrygame - parse
+
 ## Phonegap build service (config.xml) ##
 ```c
+https://build.phonegap.com/ - Apps - [specific project] - Update code - Zip file including config.xml
+
 <gap:plugin name="com.cranberrygame.cordova.plugin.pushnotification.parse" source="plugins.cordova.io" />
 ```
+## Construct2 ##
 
 # Server setting #
 ```c
@@ -46,7 +54,11 @@ Plugin ID: com.cranberrygame.cordova.plugin.pushnotification.parse
 <img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/3.png"><br>
 <img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/4.png"><br>
 <img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/5.png"><br>
-<img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/6.png">
+<img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/6.png"><br>
+<img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/ios1.png"><br>
+<img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/ios2.png"><br>
+<img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/ios3.png"><br>
+<img src="https://github.com/cranberrygame/cordova-plugin-pushnotification-parse/blob/master/doc/ios4.png">
 
 # API #
 ```javascript
@@ -117,7 +129,7 @@ window.parse.unsubscribe('Game');//parameter: channel
 [![](http://img.youtube.com/vi/xX4znfZx8HE/0.jpg)](https://www.youtube.com/watch?v=xX4znfZx8HE&feature=youtu.be "Youtube")
 
 You can also run following test apk.
-https://dl.dropboxusercontent.com/u/186681453/pluginsforcordova/parse/CordovaApp-debug.apk
+https://dl.dropboxusercontent.com/u/186681453/pluginsforcordova/parse/apk.html
 
 # Useful links #
 
