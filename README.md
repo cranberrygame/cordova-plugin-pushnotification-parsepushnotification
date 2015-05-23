@@ -19,16 +19,14 @@ this is open source cordova plugin.
 # Install plugin #
 
 ## Cordova cli ##
-```c
 https://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface - npm install -g cordova@4.1.2
-
+```c
 cordova plugin add com.cranberrygame.cordova.plugin.pushnotification.parse
 ```
 
 ## Xdk ##
-```c
 https://software.intel.com/en-us/intel-xdk - Download XDK - XDK PORJECTS - [specific project] - CORDOVA 3.X HYBRID MOBILE APP SETTINGS - PLUGINS - Third Party Plugins - Add a Third Party Plugin - Get Plugin from the Web -
-
+```c
 Name: parse
 Plugin ID: com.cranberrygame.cordova.plugin.pushnotification.parse
 [v] Plugin is located in the Apache Cordova Plugins Registry
@@ -38,9 +36,8 @@ Plugin ID: com.cranberrygame.cordova.plugin.pushnotification.parse
 https://cocoon.io - Create project - [specific project] - Setting - Plugins - Search - cranberrygame - parse
 
 ## Phonegap build service (config.xml) ##
-```c
 https://build.phonegap.com/ - Apps - [specific project] - Update code - Zip file including config.xml
-
+```c
 <gap:plugin name="com.cranberrygame.cordova.plugin.pushnotification.parse" source="plugins.cordova.io" />
 ```
 ## Construct2 ##
