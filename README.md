@@ -5,13 +5,15 @@ parse push notification
 
 [android, ios, wp8] [cordova cli] [xdk] [cocoon]
 
-requires parse account http://parse.com
+Requires parse account http://parse.com
 
 Parse android SDK (v1.9.4)
 Parse ios SDK (v1.7.5)
 Parse wp8 SDK (v1.5.3)
 
-this is open source cordova plugin.
+This is open source cordova plugin.
+
+You can see Plugins For Cordova in one page: http://cranberrygame.github.io?referrer=github
 
 # Change log #
 ```c
