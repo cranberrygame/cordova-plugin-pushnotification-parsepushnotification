@@ -297,6 +297,15 @@
             Facebook SDK to get access to Facebook user data.
             </summary>
         </member>
+        <member name="M:Parse.PlatformHooks.GetAppAttribute(System.String)">
+            <summary>
+            Gets an attribute from the Windows Phone App Manifest App element
+            </summary>
+            <param name="attributeName">the attribute name</param>
+            <returns>the attribute value</returns>
+            This is a duplicate of what we have in ParseInstallation. We do it because
+            it's easier to maintain this way (rather than referencing <c>PlatformHooks</c> everywhere).
+        </member>
         <member name="P:Parse.PlatformHooks.ApplicationSettings">
             <summary>
             Provides a dictionary that gets persisted on the filesystem between runs of the app.
@@ -310,7 +319,7 @@
         </member>
         <member name="T:Parse.ParsePush">
             <summary>
-             A utility class for sending push notifications.
+             A utility class for sending and receiving push notifications.
             </summary>
         </member>
         <member name="M:Parse.ParsePush.PushJson(Microsoft.Phone.Notification.NotificationEventArgs)">
@@ -356,106 +365,6 @@
              requested. The current status of recent push notifications can be seen in your Push Notifications
              console on http://parse.com
             </summary>
-            <param name="cancellationToken">CancellationToken to cancel the current operation.</param>
-        </member>
-        <member name="M:Parse.ParsePush.SubscribeAsync(System.String)">
-            <summary>
-            Subscribe the current installation to this channel. This is shorthand for:
-            
-            <code>
-            var installation = ParseInstallation.CurrentInstallation;
-            installation.AddUniqueToList("channels", channel);
-            installation.SaveAsync();
-            </code>
-            </summary>
-            <param name="channel">The channel to which this installation should subscribe.</param>
-        </member>
-        <member name="M:Parse.ParsePush.SubscribeAsync(System.String,System.Threading.CancellationToken)">
-            <summary>
-            Subscribe the current installation to this channel. This is shorthand for:
-            
-            <code>
-            var installation = ParseInstallation.CurrentInstallation;
-            installation.AddUniqueToList("channels", channel);
-            installation.SaveAsync(cancellationToken);
-            </code>
-            </summary>
-            <param name="channel">The channel to which this installation should subscribe.</param>
-            <param name="cancellationToken">CancellationToken to cancel the current operation.</param>
-        </member>
-        <member name="M:Parse.ParsePush.SubscribeAsync(System.Collections.Generic.IEnumerable{System.String})">
-            <summary>
-            Subscribe the current installation to these channels. This is shorthand for:
-            
-            <code>
-            var installation = ParseInstallation.CurrentInstallation;
-            installation.AddRangeUniqueToList("channels", channels);
-            installation.SaveAsync();
-            </code>
-            </summary>
-            <param name="channels">The channels to which this installation should subscribe.</param>
-        </member>
-        <member name="M:Parse.ParsePush.SubscribeAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
-            <summary>
-            Subscribe the current installation to these channels. This is shorthand for:
-            
-            <code>
-            var installation = ParseInstallation.CurrentInstallation;
-            installation.AddRangeUniqueToList("channels", channels);
-            installation.SaveAsync(cancellationToken);
-            </code>
-            </summary>
-            <param name="channels">The channels to which this installation should subscribe.</param>
-            <param name="cancellationToken">CancellationToken to cancel the current operation.</param>
-        </member>
-        <member name="M:Parse.ParsePush.UnsubscribeAsync(System.String)">
-            <summary>
-            Unsubscribe the current installation from this channel. This is shorthand for:
-            
-            <code>
-            var installation = ParseInstallation.CurrentInstallation;
-            installation.Remove("channels", channel);
-            installation.SaveAsync();
-            </code>
-            </summary>
-            <param name="channel">The channel from which this installation should unsubscribe.</param>
-        </member>
-        <member name="M:Parse.ParsePush.UnsubscribeAsync(System.String,System.Threading.CancellationToken)">
-            <summary>
-            Unsubscribe the current installation from this channel. This is shorthand for:
-            
-            <code>
-            var installation = ParseInstallation.CurrentInstallation;
-            installation.Remove("channels", channel);
-            installation.SaveAsync(cancellationToken);
-            </code>
-            </summary>
-            <param name="channel">The channel from which this installation should unsubscribe.</param>
-            <param name="cancellationToken">CancellationToken to cancel the current operation.</param>
-        </member>
-        <member name="M:Parse.ParsePush.UnsubscribeAsync(System.Collections.Generic.IEnumerable{System.String})">
-            <summary>
-            Unsubscribe the current installation from these channels. This is shorthand for:
-            
-            <code>
-            var installation = ParseInstallation.CurrentInstallation;
-            installation.RemoveAllFromList("channels", channels);
-            installation.SaveAsync();
-            </code>
-            </summary>
-            <param name="channels">The channels from which this installation should unsubscribe.</param>
-        </member>
-        <member name="M:Parse.ParsePush.UnsubscribeAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
-            <summary>
-            Unsubscribe the current installation from these channels. This is shorthand for:
-            
-            <code>
-            var installation = ParseInstallation.CurrentInstallation;
-            installation.RemoveAllFromList("channels", channels);
-            installation.SaveAsync(cancellationToken);
-            </code>
-            </summary>
-            <param name="channels">The channels from which this installation should unsubscribe.</param>
             <param name="cancellationToken">CancellationToken to cancel the current operation.</param>
         </member>
         <member name="M:Parse.ParsePush.SendAlertAsync(System.String)">
@@ -566,6 +475,106 @@
             <param name="data">A push payload. See the ParsePush.Data property for more information.</param>
             <param name="query">A query filtering the devices which should receive this Push Notification.</param>
         </member>
+        <member name="M:Parse.ParsePush.SubscribeAsync(System.String)">
+            <summary>
+            Subscribe the current installation to this channel. This is shorthand for:
+            
+            <code>
+            var installation = ParseInstallation.CurrentInstallation;
+            installation.AddUniqueToList("channels", channel);
+            installation.SaveAsync();
+            </code>
+            </summary>
+            <param name="channel">The channel to which this installation should subscribe.</param>
+        </member>
+        <member name="M:Parse.ParsePush.SubscribeAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Subscribe the current installation to this channel. This is shorthand for:
+            
+            <code>
+            var installation = ParseInstallation.CurrentInstallation;
+            installation.AddUniqueToList("channels", channel);
+            installation.SaveAsync(cancellationToken);
+            </code>
+            </summary>
+            <param name="channel">The channel to which this installation should subscribe.</param>
+            <param name="cancellationToken">CancellationToken to cancel the current operation.</param>
+        </member>
+        <member name="M:Parse.ParsePush.SubscribeAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Subscribe the current installation to these channels. This is shorthand for:
+            
+            <code>
+            var installation = ParseInstallation.CurrentInstallation;
+            installation.AddRangeUniqueToList("channels", channels);
+            installation.SaveAsync();
+            </code>
+            </summary>
+            <param name="channels">The channels to which this installation should subscribe.</param>
+        </member>
+        <member name="M:Parse.ParsePush.SubscribeAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Subscribe the current installation to these channels. This is shorthand for:
+            
+            <code>
+            var installation = ParseInstallation.CurrentInstallation;
+            installation.AddRangeUniqueToList("channels", channels);
+            installation.SaveAsync(cancellationToken);
+            </code>
+            </summary>
+            <param name="channels">The channels to which this installation should subscribe.</param>
+            <param name="cancellationToken">CancellationToken to cancel the current operation.</param>
+        </member>
+        <member name="M:Parse.ParsePush.UnsubscribeAsync(System.String)">
+            <summary>
+            Unsubscribe the current installation from this channel. This is shorthand for:
+            
+            <code>
+            var installation = ParseInstallation.CurrentInstallation;
+            installation.Remove("channels", channel);
+            installation.SaveAsync();
+            </code>
+            </summary>
+            <param name="channel">The channel from which this installation should unsubscribe.</param>
+        </member>
+        <member name="M:Parse.ParsePush.UnsubscribeAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Unsubscribe the current installation from this channel. This is shorthand for:
+            
+            <code>
+            var installation = ParseInstallation.CurrentInstallation;
+            installation.Remove("channels", channel);
+            installation.SaveAsync(cancellationToken);
+            </code>
+            </summary>
+            <param name="channel">The channel from which this installation should unsubscribe.</param>
+            <param name="cancellationToken">CancellationToken to cancel the current operation.</param>
+        </member>
+        <member name="M:Parse.ParsePush.UnsubscribeAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Unsubscribe the current installation from these channels. This is shorthand for:
+            
+            <code>
+            var installation = ParseInstallation.CurrentInstallation;
+            installation.RemoveAllFromList("channels", channels);
+            installation.SaveAsync();
+            </code>
+            </summary>
+            <param name="channels">The channels from which this installation should unsubscribe.</param>
+        </member>
+        <member name="M:Parse.ParsePush.UnsubscribeAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Unsubscribe the current installation from these channels. This is shorthand for:
+            
+            <code>
+            var installation = ParseInstallation.CurrentInstallation;
+            installation.RemoveAllFromList("channels", channels);
+            installation.SaveAsync(cancellationToken);
+            </code>
+            </summary>
+            <param name="channels">The channels from which this installation should unsubscribe.</param>
+            <param name="cancellationToken">CancellationToken to cancel the current operation.</param>
+        </member>
         <member name="E:Parse.ParsePush.ToastNotificationReceived">
             <summary>
             An event fired when a push notification of any type (i.e. toast, tile, badge, or raw) is
@@ -634,6 +643,11 @@
             This should not be used in tandem with Data.
             </summary>
         </member>
+        <member name="E:Parse.ParsePush.ParsePushNotificationReceived">
+            <summary>
+            An event fired when a push notification is received.
+            </summary>
+        </member>
         <member name="T:Parse.ParseInstallation">
             <summary>
              Represents this app installed on this device. Use this class to track infomation you want
@@ -663,6 +677,35 @@
             Microsoft does not give us more granular location information.
             Built from http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/zone_tzid.html
             </summary>
+        </member>
+        <member name="M:Parse.ParseInstallation.getDeviceType">
+            <summary>
+            The runtime target of this application. Always returns <c>winphone</c>
+            </summary>
+        </member>
+        <member name="M:Parse.ParseInstallation.getAppNameAsync">
+            <summary>
+            Gets the application name from <c>WMAppManifest.xml</c>.
+            </summary>
+            <returns>Application name.</returns>
+        </member>
+        <member name="M:Parse.ParseInstallation.getAppIdentifier">
+            <summary>
+            Gets the application unique identifier from <c>WMAppManifest.xml</c>.
+            </summary>
+            <returns>Application identifier.</returns>
+        </member>
+        <member name="M:Parse.ParseInstallation.getAppVersion">
+            <summary>
+            Gets the application version from <c>WMAppManifest.xml</c>.
+            </summary>
+            <returns>Application version.</returns>
+        </member>
+        <member name="M:Parse.ParseInstallation.getTimeZone">
+            <summary>
+            Gets current Timezone of the device.
+            </summary>
+            <returns>Current Timezone of the device.</returns>
         </member>
         <member name="F:Parse.ParseInstallation.toastChannelTag">
             <summary>
@@ -708,6 +751,28 @@
             A GUID that uniquely names this app installed on this device.
             </summary>
         </member>
+        <member name="P:Parse.ParseInstallation.DeviceType">
+            <summary>
+            The runtime target of this installation object.
+            </summary>
+        </member>
+        <member name="P:Parse.ParseInstallation.AppName">
+            <summary>
+            The user-friendly display name of this application.
+            </summary>
+        </member>
+        <member name="P:Parse.ParseInstallation.AppVersion">
+            <summary>
+            A version string consisting of Major.Minor.Build.Revision.
+            </summary>
+        </member>
+        <member name="P:Parse.ParseInstallation.AppIdentifier">
+            <summary>
+            The system-dependent unique identifier of this installation. This identifier should be
+            sufficient to distinctly name an app on stores which may allow multiple apps with the
+            same display name.
+            </summary>
+        </member>
         <member name="P:Parse.ParseInstallation.TimeZone">
             <summary>
             The time zone in which this device resides. This string is in the tz database format
@@ -726,28 +791,6 @@
             <summary>
             A sequence of arbitrary strings which are used to identify this installation for push notifications.
             By convention, the empty string is known as the "Broadcast" channel.
-            </summary>
-        </member>
-        <member name="P:Parse.ParseInstallation.DeviceType">
-            <summary>
-            The runtime target of this application. Is one of winrt, winphone, or dotnet.
-            </summary>
-        </member>
-        <member name="P:Parse.ParseInstallation.AppName">
-            <summary>
-            The user-friendly display name of this application.
-            </summary>
-        </member>
-        <member name="P:Parse.ParseInstallation.AppIdentifier">
-            <summary>
-            The system-dependent unique identifier of this installation. This identifier should be
-            sufficient to distinctly name an app on stores which may allow multiple apps with the
-            same display name.
-            </summary>
-        </member>
-        <member name="P:Parse.ParseInstallation.AppVersion">
-            <summary>
-            A version string consisting of Major.Minor.Build.Revision.
             </summary>
         </member>
     </members>

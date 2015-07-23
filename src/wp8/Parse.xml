@@ -451,12 +451,6 @@
             <param name="progress">The progress callback.</param>
             <param name="cancellationToken">The cancellation token.</param>
         </member>
-        <member name="F:Parse.ParseFile.MIMETypesDictionary">
-            <summary>
-            A list of file extensions to mime types as found here:
-            http://stackoverflow.com/questions/58510/using-net-how-can-you-find-the-mime-type-of-a-file-based-on-the-file-signature
-            </summary>
-        </member>
         <member name="P:Parse.ParseFile.IsDirty">
             <summary>
             Gets whether the file still needs to be saved.
@@ -479,6 +473,21 @@
             <summary>
             Gets the url of the file.  It is only available after you save the file or after
             you get the file from a <see cref="T:Parse.ParseObject"/>.
+            </summary>
+        </member>
+        <member name="T:Parse.ParsePushNotificationEventArgs">
+            <summary>
+            A wrapper around Parse push notification payload.
+            </summary>
+        </member>
+        <member name="P:Parse.ParsePushNotificationEventArgs.Payload">
+            <summary>
+            The payload of the push notification as <c>IDictionary</c>.
+            </summary>
+        </member>
+        <member name="P:Parse.ParsePushNotificationEventArgs.StringPayload">
+            <summary>
+            The payload of the push notification as <c>string</c>.
             </summary>
         </member>
         <member name="T:Parse.ParseQueryExtensions">

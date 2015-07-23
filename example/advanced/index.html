@@ -6,43 +6,40 @@
 
 <script>
 
-var applicationId = "REPLACE_THIS_WITH_YOUR_APPLICATION_ID";
-var clientKey = "REPLACE_THIS_WITH_YOUR_CLIENT_KEY";
-
-/*
-var applicationId;
-var clientKey;
-//android
-if (navigator.userAgent.match(/Android/i)) {
-	applicationId = "REPLACE_THIS_WITH_YOUR_APPLICATION_ID";
-	clientKey = "REPLACE_THIS_WITH_YOUR_CLIENT_KEY";
-}
-//ios
-else if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
-	applicationId = "REPLACE_THIS_WITH_YOUR_APPLICATION_ID";
-	clientKey = "REPLACE_THIS_WITH_YOUR_CLIENT_KEY";
-}
-//wp8
-else if( navigator.userAgent.match(/Windows Phone/i) ) {
-	applicationId = "REPLACE_THIS_WITH_YOUR_APPLICATION_ID";
-	clientKey = "REPLACE_THIS_WITH_YOUR_CLIENT_KEY";
-}
-*/
+var applicationId = "XiTcV0ExgO0NknDe1NEAekcK0DPLcHpPtoGpXiUT";
+var clientKey = "XiTcV0ExgO0NknDe1NEAekcK0DPLcHpPtoGpXiUT";
 
 document.addEventListener("deviceready", function(){
 
-	//call registerAsPushNotificationClient internally
-	window.parse.setUp(applicationId, clientKey);
+	window.parsepushnotification.setUp(applicationId, clientKey);
 	
-	//registerAsPushNotificationClient callback
-	window.parse.onRegisterAsPushNotificationClientSucceeded = function() {
-		//alert('onRegisterAsPushNotificationClientSucceeded');
-		window.parse.subscribeToChannel('Game');
+	//registerAsPushNotificationClient callback (called after setUp)
+	window.parsepushnotification.onRegisterAsPushNotificationClientSucceeded = function() {
+		alert('onRegisterAsPushNotificationClientSucceeded');
 	};
+	window.parsepushnotification.onRegisterAsPushNotificationClientFailed = function() {
+		alert('onRegisterAsPushNotificationClientFailed');
+	};
+	
+	//subscribe callback
+	window.parsepushnotification.onSubscribeToChannelSucceeded = function() {
+		alert('onSubscribeToChannelSucceeded');
+	};
+	window.parsepushnotification.onSubscribeToChannelFailed = function() {
+		alert('onSubscribeToChannelFailed');
+	};	
+	//unsubscribe callback
+	window.parsepushnotification.onUnsubscribeSucceeded = function() {
+		alert('onUnsubscribeSucceeded');
+	};
+	window.parsepushnotification.onUnsubscribeFailed = function() {
+		alert('onUnsubscribeFailed');
+	};	
 }, false);
 </script>
 
-Cordova Parse
+<p><button onclick="window.parsepushnotification.subscribeToChannel('Game');">subscribeToChannel</button></p>
+<p><button onclick="window.parsepushnotification.unsubscribe('Game');">unsubscribe</button></p>
 
 </body>
 </html>

@@ -1,0 +1,41 @@
+{
+  "name": "cordova-plugin-pushnotification-parsepushnotification",
+  "version": "1.0.30",
+  "description": "Cordova Parse Push Notification plugin",
+  "cordova": {
+    "id": "cordova-plugin-pushnotification-parsepushnotification",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "pushnotification",
+    "parse",
+    "promotion",
+    "advanced",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp8"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "cranberrygame",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/issues"
+  },
+  "homepage": "https://github.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification#readme"
+}

@@ -183,7 +183,7 @@ PF_ASSUME_NONNULL_BEGIN
 
  @param user User to link to Twitter.
  @param block The block to execute.
- It should have the following argument signature: `^(BOOL *success, NSError *error)`.
+ It should have the following argument signature: `^(BOOL success, NSError *error)`.
  */
 + (void)linkUser:(PFUser *)user block:(PF_NULLABLE PFBooleanResultBlock)block;
 
@@ -233,7 +233,7 @@ PF_ASSUME_NONNULL_BEGIN
  @param authToken The auth token for the user's session.
  @param authTokenSecret The auth token secret for the user's session.
  @param block The block to execute.
- It should have the following argument signature: `^(BOOL *success, NSError *error)`.
+ It should have the following argument signature: `^(BOOL success, NSError *error)`.
  */
 + (void)linkUser:(PFUser *)user
        twitterId:(NSString *)twitterId
