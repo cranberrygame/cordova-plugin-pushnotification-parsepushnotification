@@ -1,0 +1,29 @@
+<html>
+<head>
+	<script type="text/javascript" src="cordova.js"></script>
+</head>
+<body>
+
+<script>
+
+var applicationId = "XiTcV0ExgO0NknDe1NEAekcK0DPLcHpPtoGpXiUT";
+var clientKey = "XiTcV0ExgO0NknDe1NEAekcK0DPLcHpPtoGpXiUT";
+
+document.addEventListener("deviceready", function(){
+
+	window.parsepushnotification.setUp(applicationId, clientKey);
+	
+	//registerAsPushNotificationClient callback (called after setUp)
+	window.parsepushnotification.onRegisterAsPushNotificationClientSucceeded = function() {
+		alert('onRegisterAsPushNotificationClientSucceeded');
+	};
+	window.parsepushnotification.onRegisterAsPushNotificationClientFailed = function() {
+		alert('onRegisterAsPushNotificationClientFailed');
+	};	
+}, false);
+</script>
+
+Cordova Parse
+
+</body>
+</html>
