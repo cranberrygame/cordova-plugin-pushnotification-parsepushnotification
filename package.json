@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-pushnotification-parsepushnotification",
-  "version": "1.0.32",
+  "version": "1.0.34",
   "description": "Cordova Parse Push Notification plugin",
   "cordova": {
     "id": "cordova-plugin-pushnotification-parsepushnotification",

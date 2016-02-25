@@ -13,7 +13,7 @@ Parse wp8 SDK (v1.5.3)
 
 This is open source cordova plugin.
 
-You can see Plugins For Cordova in one page: http://cranberrygame.github.io?referrer=github
+You can see Cordova Plugins in one page: http://cranberrygame.github.io?referrer=github
 
 # Change log #
 ```c
@@ -21,18 +21,17 @@ You can see Plugins For Cordova in one page: http://cranberrygame.github.io?refe
 # Install plugin #
 
 ## Cordova cli ##
-https://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface - npm install -g cordova@5.0.0
+https://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface - npm install -g cordova@6.0.0
 ```c
 cordova plugin add cordova-plugin-pushnotification-parsepushnotification
 (when build error, use github url: cordova plugin add https://github.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification)
 ```
 
 ## Xdk ##
-https://software.intel.com/en-us/intel-xdk - Download XDK - XDK PORJECTS - [specific project] - CORDOVA 3.X HYBRID MOBILE APP SETTINGS - PLUGINS - Third Party Plugins - Add a Third Party Plugin - Get Plugin from the Web -
+https://software.intel.com/en-us/intel-xdk - Download XDK - XDK PORJECTS - [specific project] - CORDOVA HYBRID MOBILE APP SETTINGS - Plugin Management - Add Plugins to this Project - Third Party Plugins -
 ```c
-Name: parsepushnotification
+Plugin Source: Cordova plugin registry
 Plugin ID: cordova-plugin-pushnotification-parsepushnotification
-[v] Plugin is located in the Apache Cordova Plugins Registry
 ```
 
 ## Cocoon ##
@@ -67,12 +66,12 @@ https://plus.google.com/102658703990850475314/posts/XS5jjEApJYV
 <img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios2.png"><br>
 <img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios3.png"><br>
 <img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios4.png"><br>
-<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios_cer_to_p12_1.png"><br>
-<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios_cer_to_p12_2.png"><br>
-<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios_cer_to_p12_3.png"><br>
-<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios_cer_to_p12_4.png"><br>
-<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios_cer_to_p12_5.png"><br>
-<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios_cer_to_p12_6.png"><br>
+<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios_ssl_cer_to_p12_1.png"><br>
+<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios_ssl_cer_to_p12_2.png"><br>
+<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios_ssl_cer_to_p12_3.png"><br>
+<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios_ssl_cer_to_p12_4.png"><br>
+<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios_ssl_cer_to_p12_5.png"><br>
+<img src="https://raw.githubusercontent.com/cranberrygame/cordova-plugin-pushnotification-parsepushnotification/master/doc/ios_ssl_cer_to_p12_6.png"><br>
 Configuring your App ID for Development Push Notifications<br>
 https://www.parse.com/tutorials/ios-push-notifications<br>
 How do I make a .p12<br>
@@ -130,7 +129,7 @@ https://dl.dropboxusercontent.com/u/186681453/pluginsforcordova/parsepushnotific
 
 # Useful links #
 
-Plugin For Cordova<br>
+Cordova Plugins<br>
 http://cranberrygame.github.io?referrer=github
 
 # Credits #

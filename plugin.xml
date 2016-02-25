@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-pushnotification-parsepushnotification"
-    version="1.0.32">
+    version="1.0.34">
 	
     <name>Cordova Parse Push Notification plugin</name>
     <description>Cordova Parse Push Notification plugin</description>
@@ -15,7 +15,7 @@
 	    <engine name="cordova" version=">=3.0.0" />
 	</engines>
 	
-    <js-module src="www/parsepushnotification.js">
+    <js-module src="www/parsepushnotification.js" name="parsepushnotification">
         <clobbers target="window.parsepushnotification" />
     </js-module>
 
